@@ -45037,11 +45037,11 @@
       "trait_type": "11_Acessories_Ears",
       "value": "01_NormalAirpods"
     }, {
-      "trait_type": "12_Acessories_Face",
-      "value": "01_GlassesA"
-    }, {
       "trait_type": "13_Hair",
       "value": "19_HairNormal"
+    },{
+      "trait_type": "12_Acessories_Face",
+      "value": "01_GlassesA"
     }]
   }
 }
