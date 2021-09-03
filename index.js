@@ -11,7 +11,7 @@ fs.readFile(__dirname + "/metadata.json", (error, data) => {
        // console.log('dummy', dummy.attributes)
         let hasSame = 0;
         Object.values(content).forEach((dummy2) => {
-            if (dummy.name === dummy2.name) { // para nao comparar com o mesmo
+            if (dummy.name !== dummy2.name) { // para nao comparar com o mesmo
                 hasSame = compareTraits(dummy, dummy2)
             }
         })
