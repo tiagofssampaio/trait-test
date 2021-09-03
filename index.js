@@ -52,8 +52,8 @@ function compareTraits(dummy1, dummy2)
     // se o count2 for mais que o total de traits de um dos dummies é porque são iguais
     if (count === traits2.length) {
         isEqual = true;
-        console.log('DUMMY1: ', dummy1.name)
-        console.log('DUMMY2: ', dummy2.name)
+        console.log('#### ', dummy1.name)
+        console.log('SAME DUMMY: ', dummy2.name)
     }
 
     return isEqual;
