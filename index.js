@@ -10,12 +10,15 @@ fs.readFile(__dirname + "/metadata.json", (error, data) => {
     Object.values(content).forEach((dummy) => {
        // console.log('dummy', dummy.attributes)
         let hasSame = 0;
+        console.log('### ' + dummy.name);
         Object.values(content).forEach((dummy2) => {
             if (dummy.name !== dummy2.name) { // para nao comparar com o mesmo
                 hasSame = compareTraits(dummy, dummy2)
             }
         })
-        console.log('hasSame => ', hasSame);
+        if (!hasSame) {
+            console.log('SAME DUMMY: NONE');
+        }
     })
 
     console.log('FINISHED');
@@ -37,10 +40,7 @@ function compareTraits(dummy1, dummy2)
     Object.values(traits1).map((trait1) => {
         let trait1Code = trait1.trait_type + '-' + trait1.value
         Object.values(traits2).map((trait2) => {
-            //console.log('trait2', trait2)
             let trait2Code = trait2.trait_type + '-' + trait2.value
-
-            // console.log(trait1Code + ' -- ' + trait2Code)
             if (trait1Code === trait2Code) {
                 count++
             }
